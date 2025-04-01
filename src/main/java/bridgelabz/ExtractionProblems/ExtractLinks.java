@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public class ExtractLinks {
     public static void main(String[] args) {
-        String regex = "https?://(www\\.)?([\\w.-]+\\.[a-z]{2,})";
-        String test = "Websites: https://www.google.com, http://example.org and https://github.com";
+        String regex = "http(s)?://(www.)?([\\w.-]+\\.[a-z]{2,})";
+        String test = "Websites: https://www.google.com, example.org and https://github.com";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(test);
 
